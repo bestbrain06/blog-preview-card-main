@@ -1,0 +1,156 @@
+/* STYLE GUIDE */
+/* SPACING */
+/* 4px / 8px / 12px / 24px */
+
+/* --------- GLOBAL STYLES ---------*/
+@font-face {
+  font-family: "Figtree";
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url(./assets/fonts/static/Figtree-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+:root {
+  /* COLORS */
+  --primary: #f4d04e;
+
+  --grey-base: #6b6b6b;
+  --grey-shade: #111111;
+
+  --white: #ffffff;
+
+  /* TYPOGRAPHY */
+  --font-family: "Figtree";
+
+  --font-size-small: 1.4rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 2.4rem;
+
+  --font-weight-regular: 500;
+  --font-weight-bold: 800;
+
+  --line-height: 150%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+  color: var(--grey-base);
+  background-color: var(--primary);
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1440px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: var(--font-size-large);
+}
+
+h1,
+h2 {
+  font-weight: var(--font-weight-bold);
+  color: var(--grey-shade);
+}
+
+h2 {
+  font-size: var(--font-size-small);
+}
+
+p {
+  font-size: var(--font-size-medium);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+small {
+  color: var(--grey-shade);
+}
+
+/* COMPONENTS */
+.btn {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  padding: 0.4rem 1.2rem;
+  border-radius: 4px;
+}
+
+.btn-primary:link,
+.btn-primary:visited,
+.btn-primary:hover,
+.btn-primary:active {
+  color: var(--grey-shade);
+  background-color: var(--primary);
+}
+
+/* CARD */
+.card {
+  background-color: var(--white);
+  max-width: 384px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2.4rem;
+
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 1);
+}
+
+.card-image {
+  border-radius: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.card-content .title {
+  cursor: pointer;
+  transition: color 250ms ease-in;
+}
+
+.card-content .title:hover {
+  color: var(--primary);
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 5.5px;
+}
+
+.card-author img {
+  width: 32px;
+}
